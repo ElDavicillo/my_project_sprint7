@@ -20,5 +20,7 @@ if hist_button:  # al hacer clic en el botón
     st.plotly_chart(fig, use_container_width=True)
 
 # Crear un gráfico de dispersión
-fig = px.scatter(car_data, x="odometer", y="price")
-fig.show()  # Crear gráfico de dispersión
+fig_scatter = px.scatter(car_data, x="odometer", y="price")
+
+# Mostrar el gráfico de dispersión en Streamlit
+st.plotly_chart(fig_scatter, use_container_width=True)
